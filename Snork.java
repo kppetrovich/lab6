@@ -43,22 +43,22 @@ public class Snork extends Mumi {
         this.hungry -= 25;
     }
 
-    public void digBunker() throws NoStaminaExcep {
+    public void digBunker() {
         this.stamina -= 74;
         this.thirst -= 15;
         this.hungry -= 25;
         if (stamina < 0 || thirst < 0 || hungry < 0) {
-            throw new NoStaminaExcep("Ошибка, действие digBunker не может быть выполнено");
+            System.out.println("Ошибка, действие digBunker не может быть выполнено");
         }
         System.out.print(name + " выкопал спуск в бункер. ");
     }
 
-    public void digHouse() throws NoStaminaExcep {
+    public void digHouse() {
         this.stamina -= 44;
         this.thirst -= 19;
         this.hungry -= 15;
         if (stamina < 0 || thirst < 0 || hungry < 0) {
-            throw new NoStaminaExcep("Ошибка, действие digHouse не может быть выполнено");
+            System.out.println("Ошибка, действие digHouse не может быть выполнено");
         }
         System.out.print(name + " окопал дом канавой для отвода воды. ");
     }
